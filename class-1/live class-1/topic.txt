@@ -1,0 +1,9 @@
+Query Builder Fundamentals: Retrieval, Selection, and Advanced Joins
+
+টপিক:
+
+Inner Join, Left Right, Right Join, Cross Join Advanced Join Clauses | Select Clauses, Where Clauses, Advance Clauses | Single Rows.Aggregates | Retrieving All Rows via model | Why and how Query Builder works
+
+নোট:
+
+Why and how Query Builder works | Retrieving All Rows, Single Rows, Aggregates | 

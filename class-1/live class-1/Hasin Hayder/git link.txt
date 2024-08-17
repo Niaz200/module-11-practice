@@ -1,0 +1,13 @@
+https://github.com/LearnWithHasinHayder/query-builder
+
+
+
+
+git clone https://github.com/LearnWithHasinHayder/query-builder
+ composer install
+ .env.example .env
+ php artisan migrate
+ php artisan db:seed
+ npm install
+ npm run dev
+ php artisan serve

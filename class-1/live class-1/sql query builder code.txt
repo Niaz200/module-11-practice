@@ -1,0 +1,291 @@
+No:1
+      //all data
+    $invoices = DB::table('invoices')->get();
+
+Ans: 
+  [{"id":1,"user_id":1,"client":"Ms. Valentina Torp","total_price":"993.17","paid":1,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"},
+  {"id":2,"user_id":1,"client":"Monserrate Ratke V","total_price":"3679.43","paid":0,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"},
+  {"id":3,"user_id":1,"client":"Lolita Boyer","total_price":"2698.56","paid":1,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"},
+  {"id":4,"user_id":1,"client":"Rosario Hayes","total_price":"2681.74","paid":0,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"},
+  {"id":5,"user_id":1,"client":"Miss Janie Welch","total_price":"4058.61","paid":1,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"},
+  {"id":6,"user_id":1,"client":"Casimer Wolff","total_price":"2144.55","paid":0,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"},
+  {"id":7,"user_id":1,"client":"Dexter Watsica","total_price":"3316.97","paid":1,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"},
+  {"id":8,"user_id":1,"client":"Ronaldo Conroy","total_price":"3720.65","paid":1,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"},
+  {"id":9,"user_id":1,"client":"Ms. Alexandria Runolfsdottir MD","total_price":"3308.19","paid":1,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"},
+  {"id":10,"user_id":1,"client":"Dasia Mitchell","total_price":"4029.82","paid":1,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"}]
+
+
+No:2
+
+   //first item
+    $invoices = DB::table('invoices')->first();
+
+Ans: 
+
+  {"id":1,"user_id":1,"client":"Ms. Valentina Torp","total_price":"993.17","paid":1,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"}
+
+
+No:3
+
+  //2nd item
+   $invoices = DB::table('invoices')->where('id',2)->first();
+
+Ans: 
+
+  {"id":2,"user_id":1,"client":"Monserrate Ratke V","total_price":"3679.43","paid":0,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"}
+
+
+
+No:4
+
+    //first 3 items
+     $invoices = DB::table('invoices')->take(3)->get();
+     
+
+Ans:
+
+  [{"id":1,"user_id":1,"client":"Ms. Valentina Torp","total_price":"993.17","paid":1,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"},
+  {"id":2,"user_id":1,"client":"Monserrate Ratke V","total_price":"3679.43","paid":0,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"},
+  {"id":3,"user_id":1,"client":"Lolita Boyer","total_price":"2698.56","paid":1,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"}]
+ 
+
+
+No:5
+
+      //first 3 items
+        
+       $invoices = DB::table('invoices')->limit(3)->get();
+
+Ans: 
+
+  [{"id":1,"user_id":1,"client":"Ms. Valentina Torp","total_price":"993.17","paid":1,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"},
+  {"id":2,"user_id":1,"client":"Monserrate Ratke V","total_price":"3679.43","paid":0,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"},
+  {"id":3,"user_id":1,"client":"Lolita Boyer","total_price":"2698.56","paid":1,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"}]
+
+
+
+No:6
+
+    //user id = 1, paid = 1
+     $invoices = DB::table('invoices')->where('user_id', 1)->where('paid', 1)->get();
+
+Ans:
+
+  [{"id":1,"user_id":1,"client":"Ms. Valentina Torp","total_price":"993.17","paid":1,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"},
+  {"id":3,"user_id":1,"client":"Lolita Boyer","total_price":"2698.56","paid":1,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"},
+  {"id":5,"user_id":1,"client":"Miss Janie Welch","total_price":"4058.61","paid":1,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"},
+  {"id":7,"user_id":1,"client":"Dexter Watsica","total_price":"3316.97","paid":1,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"},
+  {"id":8,"user_id":1,"client":"Ronaldo Conroy","total_price":"3720.65","paid":1,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"},
+  {"id":9,"user_id":1,"client":"Ms. Alexandria Runolfsdottir MD","total_price":"3308.19","paid":1,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"},
+  {"id":10,"user_id":1,"client":"Dasia Mitchell","total_price":"4029.82","paid":1,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"}]
+
+No:7
+
+
+     //how many paid invoice
+
+       $invoices = DB::table('invoices')->where('paid', 1)->count();
+
+Ans: 7
+
+
+No:8
+
+   // select id, user_id, paid, client
+
+      $invoices = DB::table('invoices')->select('id', 'user_id', 'paid', 'client')->get();
+      
+
+Ans: 
+
+  [{"id":1,"user_id":1,"paid":1,"client":"Ms. Valentina Torp"},
+  {"id":2,"user_id":1,"paid":0,"client":"Monserrate Ratke V"},
+  {"id":3,"user_id":1,"paid":1,"client":"Lolita Boyer"},
+  {"id":4,"user_id":1,"paid":0,"client":"Rosario Hayes"},
+  {"id":5,"user_id":1,"paid":1,"client":"Miss Janie Welch"},
+  {"id":6,"user_id":1,"paid":0,"client":"Casimer Wolff"},
+  {"id":7,"user_id":1,"paid":1,"client":"Dexter Watsica"},
+  {"id":8,"user_id":1,"paid":1,"client":"Ronaldo Conroy"},
+  {"id":9,"user_id":1,"paid":1,"client":"Ms. Alexandria Runolfsdottir MD"},
+ {"id":10,"user_id":1,"paid":1,"client":"Dasia Mitchell"}]
+ 
+
+No:9
+
+  // select id, user_id, paid, client
+
+     
+      $invoices = DB::table('invoices')
+           ->select('id', 'user_id', 'paid', 'client')
+       	   ->where('paid', 1)
+           ->get();
+
+Ans: 
+ 
+  [{"id":1,"user_id":1,"paid":1,"client":"Ms. Valentina Torp"},
+  {"id":3,"user_id":1,"paid":1,"client":"Lolita Boyer"},
+  {"id":5,"user_id":1,"paid":1,"client":"Miss Janie Welch"},
+  {"id":7,"user_id":1,"paid":1,"client":"Dexter Watsica"},
+  {"id":8,"user_id":1,"paid":1,"client":"Ronaldo Conroy"},
+  {"id":9,"user_id":1,"paid":1,"client":"Ms. Alexandria Runolfsdottir MD"},
+  {"id":10,"user_id":1,"paid":1,"client":"Dasia Mitchell"}]
+
+
+No:10
+
+     // select id, user_id, paid, client,total price
+        
+          $invoices = DB::table('invoices')
+             ->select('id', 'user_id', 'paid', 'client', 'total_price')
+             ->where('paid', 1)
+             ->get();
+
+Ans:
+
+  [{"id":1,"user_id":1,"paid":1,"client":"Ms. Valentina Torp","total_price":"993.17"},
+  {"id":3,"user_id":1,"paid":1,"client":"Lolita Boyer","total_price":"2698.56"},
+  {"id":5,"user_id":1,"paid":1,"client":"Miss Janie Welch","total_price":"4058.61"},
+  {"id":7,"user_id":1,"paid":1,"client":"Dexter Watsica","total_price":"3316.97"},
+  {"id":8,"user_id":1,"paid":1,"client":"Ronaldo Conroy","total_price":"3720.65"},
+  {"id":9,"user_id":1,"paid":1,"client":"Ms. Alexandria Runolfsdottir MD","total_price":"3308.19"},
+  {"id":10,"user_id":1,"paid":1,"client":"Dasia Mitchell","total_price":"4029.82"}]
+
+No:11
+
+   // user id 1 maximum total price
+        
+          $invoices = DB::table('invoices')
+          ->where('user_id', 1)
+          ->where('paid', 1)
+          ->max('total_price');
+
+Ans:  4058.61
+
+
+No:12
+
+   //find invoice with max total_price
+
+          $max = DB::table('invoices')
+          ->where('user_id', 1)
+          ->where('paid', 1)
+          ->max('total_price');
+
+          $invoices = DB::table('invoices')
+          ->where('total_price', $max)
+          ->first();
+
+Ans: 
+
+  {"id":5,"user_id":1,"client":"Miss Janie Welch","total_price":"4058.61","paid":1,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"}
+
+
+No:13
+
+   //find invoice with max total_price for array wise output
+
+        $max = DB::table('invoices')
+         ->where('user_id', 1)
+         ->where('paid', 1)
+         ->max('total_price');
+
+         $invoices = DB::table('invoices')
+         ->where('total_price', $max)
+         ->get();
+
+
+
+Ans:
+  
+  [{"id":5,"user_id":1,"client":"Miss Janie Welch","total_price":"4058.61","paid":1,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"}]
+
+
+No:14
+
+   
+        //sum
+
+         $invoices = DB::table('invoices')->where('user_id', 1)->where('paid', 1)->sum('total_price');
+
+Ans:  22125.97
+
+
+No:15
+
+  // SELECT id, client,total_price FROM invoices JOIN invoices_items ON invoices.id = invoice_items.invoice_id where invoices.id =1
+
+   	$invoices = DB::table('invoices')
+               ->join('invoice_items', 'invoices.id', '=', 'invoice_items.invoice_id' )
+               ->select('invoices.id', 'invoices.client', 'invoices.total_price', 'invoice_items.title', 'invoice_items.total_price as item_total_price')
+               ->where('invoices.id', 1)
+               ->get();      
+          
+
+Ans:
+
+[{"id":1,"client":"Ms. Valentina Torp","total_price":"993.17","title":"Aut iusto laborum veritatis consequatur.","item_total_price":"993.17"}]
+
+No:16
+
+  // SELECT id, client,total_price FROM invoices JOIN invoices_items ON invoices.id = invoice_items.invoice_id where invoices.id =1
+
+         $invoices = DB::table('invoices')
+              ->join('invoice_items', 'invoices.id', '=', 'invoice_items.invoice_id' )
+              ->select('invoice_items.id as item_id','invoices.id', 'invoices.client', 'invoices.total_price', 'invoice_items.title', 'invoice_items.total_price as item_total_price')
+              ->where('invoices.id', 1)
+              ->get();
+
+Ans:
+
+  [{"item_id":1,"id":1,"client":"Ms. Valentina Torp","total_price":"993.17","title":"Aut iusto laborum veritatis consequatur.","item_total_price":"993.17"}]
+
+No:17
+
+    //row query
+
+        $invoices = DB::select('SELECT client, total_price FROM invoices WHERE id = ?', [9]);
+
+
+Ans:
+
+  [{"client":"Ms. Alexandria Runolfsdottir MD","total_price":"3308.19"}]
+
+No:18
+
+    //update
+
+        $invoices = DB::table('invoices')
+                ->where('id', 9)
+                ->update(['client' => 'Ms. Alexandria Runolfsdottir MD jr']);
+
+Ans:
+ 
+  Ms. Alexandria Runolfsdottir MD jr
+
+No:19
+
+    //delete
+
+        $invoices = DB::table('invoices')
+              ->where('id', 9)
+              ->delete();
+
+Ans:
+
+
+No:20
+
+   //offset
+        এখানে offset এর মানে হল, offset এর মধ্যে যে নাম্বার দিব সেই পর্যন্ত নাম্বার বাদ দিয়ে পারের গুলো দেখাবে,এখানে limit(3) দেয়া আছে তাই পরের তিনটা ডাটা দেখাবে
+
+        $invoices = DB::table('invoices')->limit(3)->offset(3)->get();
+
+Ans:
+
+  [{"id":4,"user_id":1,"client":"Rosario Hayes","total_price":"2681.74","paid":0,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"},
+  {"id":5,"user_id":1,"client":"Miss Janie Welch","total_price":"4058.61","paid":1,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"},
+  {"id":6,"user_id":1,"client":"Casimer Wolff","total_price":"2144.55","paid":0,"created_at":"2024-07-28 12:18:58","updated_at":"2024-07-28 12:18:58"}]
+
+
+
+

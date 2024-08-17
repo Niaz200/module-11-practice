@@ -1,0 +1,10 @@
+
+লাইভ ক্লাস
+
+১৫ ডিসে, রাত ১০:১৫
+
+মডিউল ১১ এর কনসেপচুয়াল ক্লাস | Gallery App Project | Prince Noman
+
+টপিক:
+
+Image Remove From Directory | Image Upload | CRUD Operations | Query Builder

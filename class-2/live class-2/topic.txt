@@ -1,0 +1,17 @@
+লাইভ ক্লাস
+
+১২ ডিসে, রাত ৯:০০
+
+এটেন্ড্যান্স স্কোর যুক্ত হবে
+
+SQL Operations: Unions, Ordering, Grouping, and Pagination
+
+টপিক:
+
+Pagination, Custom Paginati. | Group By And Having  | Unions, Order, Latest Oldest, Skip, Take, Limit
+
+নোট:
+
+Unions, Order, Latest Oldest, Skip, Take, Limit | Group By And Having | Insert, Update, Detele, Upsert | 
+Pagination, Custom Paginati. লাইভ ক্লাসে জয়েন করে, এই টপিকগুলো সম্পর্কে শিখে নিন। যদি কোনো কারণে ক্লাসটি মিস করে ফেলেন, অবশ্যই ক্লাস রেকর্ডিং টি দেখে নিবেন।
+ কারণ ক্লাসে ডিস্কাস করা টপিকগুলো থেকেও পরবর্তীতে আপনাদের এসাইনমেন্ট, এক্সাম দেয়া হয়ে থাকে।
